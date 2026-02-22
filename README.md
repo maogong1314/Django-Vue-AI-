@@ -143,27 +143,4 @@ DEEPSEEK_API_BASE_URL = 'https://api.deepseek.com/v1'
 - **上传文件位置**：默认保存到 `media/` 目录
 - **依赖过大**：`frontend/node_modules` 不要提交到 Git（已在 `.gitignore` 中忽略）
 
-## 关于 `.gitignore`（会不会影响运行）
 
-当前 `.gitignore` 中新增的内容如下：
-
-```
-**/node_modules
-**/__pycache__
-*.pyc
-*.pyo
-.env
-.env.local
-*.log
-```
-
-说明：
-
-- 这些规则 **只影响 Git 提交**，不会影响项目运行。
-- `node_modules` 可以随时用 `npm install` 重新生成。
-- `__pycache__`、`*.pyc` 是 Python 缓存文件，删掉不影响运行。
-- `.env` 是本地环境变量文件，通常不提交以避免泄露密钥。
-
----
-
-如需更详细说明或部署脚本，可在此 README 基础上继续补充。
